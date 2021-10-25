@@ -1,0 +1,77 @@
+
+.canvas {
+    background-color: beige;
+}
+.video{
+    position: relative;
+    width: 720px;
+    height: 400px;
+}
+.controls{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+}
+.time{
+    width: 100%
+}
+.time input{
+   width: 100%; 
+}
+.Listadevideos {
+    margin: 0 10px;
+    width: 100%;
+}
+.filmevideoItem{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    border:solid 1px #ddd;
+}
+.filmevideoItem h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #505050;
+}
+.filmevideoItem img{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+.main{
+    display: flex;
+}
+.playIcon{
+    background-color: transparent;
+    color: teal;
+}
+.playbutton {
+    background-color: transparent;
+    border: none;
+}
+.controls input {
+    appearance: none;
+    -webkit-appearance:none ;
+    height: 8px;
+}
+.vol{
+    background-color: transparent;
+    color: teal;
+}
+.controls input::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 8px;
+    height: 8px;
+    background-color:blue;
+}
+.paineldecontrol{
+    display: flex;
+    align-items: center;
+}
+.convert {
+    color: tomato;
+    display: flex;
+    flex-direction: column;
+}
