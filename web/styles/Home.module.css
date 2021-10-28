@@ -1,6 +1,7 @@
 
 .canvas {
     background-color: beige;
+
 }
 .video{
     position: relative;
@@ -74,4 +75,9 @@
     color: tomato;
     display: flex;
     flex-direction: column;
+}
+.volumeMutebel{
+    color:teal;
+    display: flex;
+    align-items: center;
 }

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useContext } from 'react'
 import { Homecontext } from '../context/Homecontext';
 import styles from '../styles/Home.module.css'
-import  {PauseCircleOutlineTwoTone, PlayArrow, PlayArrowTwoTone, VolumeUpTwoTone} from '@material-ui/icons'; 
+import  {PauseCircleOutlineTwoTone, PlayArrow, PlayArrowTwoTone, VolumeMuteTwoTone,VolumeMute ,VolumeUpTwoTone} from '@material-ui/icons'; 
 import videos from '../DATA/videos';
 import { converter } from '../utils/converte';
 export default function Home() {
@@ -18,7 +18,9 @@ export default function Home() {
     temptotal,
     configtemp,
     configVideo,
-    configVolume
+    configVolume,
+    isMute,
+    ConfigMute
   } = useContext(Homecontext);
   return (
     <div className={styles.main}>
@@ -52,6 +54,14 @@ export default function Home() {
          }
           </div>
         <VolumeUpTwoTone className = {styles.vol}/>
+        <div className={styles.volumeMutebel}>
+                {
+                  isMute ?
+                  (<VolumeMute className={styles.play} onClick={ConfigMute}></VolumeMute>)
+                  :
+                  (<VolumeMuteTwoTone className={styles.play} onClick={ConfigMute}></VolumeMuteTwoTone>)
+                  
+                }
       <input type="range" 
       min = "0"
       max = "1"
@@ -59,6 +69,7 @@ export default function Home() {
      value={volume}
      onChange ={(e)=> configVolume(Number(e.target.value))}
       />
+      </div>
       <div className = {styles.convert}>
         {
       converter(temptotal)

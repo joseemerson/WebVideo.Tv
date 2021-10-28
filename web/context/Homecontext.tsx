@@ -12,6 +12,8 @@ type HomecontextDate ={
  configtemp: (time: number) => void;
  configVideo:(videoidx: number) =>void;
  configVolume:(volume:number) => void;
+ ConfigMute: () => void;
+ isMute: boolean;
 }
 type Homecontextproviderprops ={
     children: ReactNode;
@@ -28,6 +30,7 @@ const Homecontextprovider = ({children}:Homecontextproviderprops) => {
     const [temptotal,settemptotal] = useState(0);
     const [videoIdx,setvideoIdx] = useState (1);
     const [volume,setvolume] =  useState(1);
+    const [isMute, setIsMute] = useState<boolean>(false);
     useEffect(()=> {
         configVideo(videoIdx);
     })
@@ -69,6 +72,11 @@ const Homecontextprovider = ({children}:Homecontextproviderprops) => {
        setvolume(volume);
        video.volume= volume;
     }
+    const ConfigMute = () => {
+        const updatedMute = !isMute;
+        setIsMute(updatedMute);
+        videoRef.current.muted = updatedMute;
+    }
     const draw = () => {
         const video = videoRef.current;
         if(video.paused || video.ended) return;
@@ -102,7 +110,9 @@ const Homecontextprovider = ({children}:Homecontextproviderprops) => {
            temptotal,
            configtemp,
            configVideo,
-           configVolume
+           configVolume,
+           isMute,
+           ConfigMute
         
            }
        }>
