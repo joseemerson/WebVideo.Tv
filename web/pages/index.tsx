@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useContext } from 'react'
 import { Homecontext } from '../context/Homecontext';
 import styles from '../styles/Home.module.css'
-import  {PauseCircleOutlineTwoTone, PlayArrow, PlayArrowTwoTone, VolumeMuteTwoTone,VolumeMute ,VolumeUpTwoTone} from '@material-ui/icons'; 
+import  {PauseCircleOutlineTwoTone, PlayArrow, PlayArrowTwoTone,VolumeUp,VolumeUpTwoTone} from '@material-ui/icons'; 
 import videos from '../DATA/videos';
 import { converter } from '../utils/converte';
 export default function Home() {
@@ -53,13 +53,12 @@ export default function Home() {
           converter(currenttime)
          }
           </div>
-        <VolumeUpTwoTone className = {styles.vol}/>
         <div className={styles.volumeMutebel}>
                 {
                   isMute ?
-                  (<VolumeMute className={styles.play} onClick={ConfigMute}></VolumeMute>)
+                  (<VolumeUp className={styles.play} onClick={ConfigMute}></VolumeUp>)
                   :
-                  (<VolumeMuteTwoTone className={styles.play} onClick={ConfigMute}></VolumeMuteTwoTone>)
+                  (<VolumeUpTwoTone className={styles.play} onClick={ConfigMute}></VolumeUpTwoTone>)
                   
                 }
       <input type="range" 

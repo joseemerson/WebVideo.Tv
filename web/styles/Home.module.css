@@ -56,10 +56,6 @@
     -webkit-appearance:none ;
     height: 8px;
 }
-.vol{
-    background-color: transparent;
-    color: teal;
-}
 .controls input::-webkit-slider-thumb {
     appearance: none;
     -webkit-appearance: none;
