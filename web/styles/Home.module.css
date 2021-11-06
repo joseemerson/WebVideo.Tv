@@ -61,7 +61,7 @@
     -webkit-appearance: none;
     width: 8px;
     height: 8px;
-    background-color:blue;
+    background-color:teal;
 }
 .paineldecontrol{
     display: flex;

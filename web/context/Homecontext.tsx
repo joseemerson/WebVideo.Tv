@@ -53,6 +53,7 @@ const Homecontextprovider = ({children}:Homecontextproviderprops) => {
          }
          video.onended = () => {
              configVideo(videoIdx+1);
+            
          }
      }
     },[videourl,currenttime]);

@@ -6,16 +6,16 @@ export const videos = [
     },
     {
         video: "video02.mp4",
-        title: "filme de ação",
+        title: "john wick1: de volta ao jogo",
         capa:  "filmeação.png"
     },
     {
-       video:"video3.mp4",
+       video:"video03.mp4",
        title: "o reino proibido",
        capa:  "capa3.png"
     },
     {
-        video:"video4.mp4",
+        video:"video04.mp4",
         title: "filme de aventura",
         capa:  "aventurafilme4.png"
     }
